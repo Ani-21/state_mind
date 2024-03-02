@@ -1,3 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"]
+  "plugins": ["simple-import-sort"],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "prettier/prettier": ["error", { "endOfLine": "auto" }],
+        "simple-import-sort/imports": "error"
+      }
+    }
+  ]
 }
